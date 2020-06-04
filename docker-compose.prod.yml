@@ -1,0 +1,23 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+
+services:
+  coton_homepage:
+    container_name: coton_homepage
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        API_URL: $GATSBY_API_URL
+    restart: always
+    expose:
+      - '80'
+    volumes:
+      - ./ftp:/usr/share/nginx/html/ftp:cached
+    environment:
+      VIRTUAL_HOST: $COTON_HOMEPAGE_HOST
+      LETSENCRYPT_HOST: $COTON_HOMEPAGE_HOST
