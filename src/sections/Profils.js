@@ -197,7 +197,7 @@ const Profils = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="50vw">
+        <CardContainer minWidth="40vw">
           {contentfulAbout.profils.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Profil {...p} />
