@@ -10,11 +10,11 @@ import Triangle from '../components/Triangle';
 
 const Background = () => (
   <div>
-    <Triangle
+    {/* <Triangle
       color="backgroundDark"
       height={['35vh', '80vh']}
       width={['95vw', '60vw']}
-    />
+    /> */}
 
     <Triangle
       color="secondary"
@@ -29,13 +29,13 @@ const Background = () => (
       invertX
     />
 
-    <Triangle
+    {/* <Triangle
       color="backgroundDark"
       height={['20vh', '20vh']}
       width={['100vw', '100vw']}
       invertX
       invertY
-    />
+    /> */}
   </div>
 );
 
