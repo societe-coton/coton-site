@@ -84,7 +84,7 @@ const LandingPage = () => (
               fontSize={[2, 3]}
               mb={[3, 4, 5]}
             >
-              {`TON. CTO`}
+              {`Groupement de CTO Freelance`}
             </Heading>
 
             <Heading

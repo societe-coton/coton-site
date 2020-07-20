@@ -173,7 +173,7 @@ Profil.propTypes = {
 
 const Profils = () => (
   <Section.Container id="profils" Background={Background}>
-    <Section.Header name="Qui sommes-nous ?" icon="💼" label="notebook" />
+    <Section.Header name="Freelances" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProfilsQuery {
