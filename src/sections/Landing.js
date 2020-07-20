@@ -7,35 +7,35 @@ import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
+import WallPaper from "../components/wallpaper-coton.png"
+import { background } from '../../colors';
 
 const Background = () => (
-  <div>
-    {/* <Triangle
-      color="backgroundDark"
-      height={['35vh', '80vh']}
-      width={['95vw', '60vw']}
-    /> */}
-
+  <div >
     <Triangle
-      color="secondary"
-      height={['38vh', '80vh']}
-      width={['50vw', '35vw']}
+      color="primary"
+      height={['100vh', '100vh']}
+      width={['100vw', '100vw']}
     />
-
     <Triangle
-      color="primaryDark"
-      height={['25vh', '35vh']}
-      width={['75vw', '60vw']}
-      invertX
-    />
-
-    {/* <Triangle
-      color="backgroundDark"
-      height={['20vh', '20vh']}
+      color="primary"
+      height={['100vh', '100vh']}
       width={['100vw', '100vw']}
       invertX
       invertY
-    /> */}
+    />
+    <Triangle
+      color="primary"
+      height={['100vh', '100vh']}
+      width={['100vw', '100vw']}
+      invertX
+    />
+    <Triangle
+      color="primary"
+      height={['100vh', '100vh']}
+      width={['100vw', '100vw']}
+      invertY
+    />
   </div>
 );
 
@@ -69,10 +69,10 @@ const LandingPage = () => (
 
         return (
           <Fragment>
-            <Heading
+            {/* <Heading
               textAlign="center"
               as="h1"
-              color="primary"
+              color="#ffffff"
               fontSize={[6, 7]}
             >
               {`Coton.`}
@@ -80,16 +80,23 @@ const LandingPage = () => (
             <Heading
               textAlign="center"
               as="h5"
-              color="primary"
+              color="#ffffff"
               fontSize={[2, 3]}
               mb={[3, 4, 5]}
             >
               {`Groupement de CTO Freelance`}
-            </Heading>
+            </Heading> */}
+
+            <img src={WallPaper} style={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              width: "75%"
+            }} />
 
             <Heading
               as="h2"
-              color="primary"
+              color="#ffffff"
               fontSize={[5, 6]}
               mb={[3, 5]}
               textAlign="center"
@@ -109,11 +116,11 @@ const LandingPage = () => (
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
-                  <SocialLink {...rest} />
+                  <SocialLink {...rest} color="background" />
                 </Box>
               ))}
             </Flex>
-            <SectionLink section="about">
+            <SectionLink section="proposition">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>
           </Fragment>
